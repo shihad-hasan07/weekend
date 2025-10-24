@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #d1d5db;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #10b981; 
+  width: 20px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

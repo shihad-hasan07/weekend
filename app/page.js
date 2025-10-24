@@ -1,12 +1,14 @@
 import Banner from "@/components/Banner";
-import Navbar from "@/components/Navbar";
+import ExplorePrograms from "@/components/ExplorePrograms";
+import OurServices from "@/components/OurServices";
 
 
-export default function Home() {
+export default function Homepage() {
   return (
     <div>
-      <Navbar></Navbar>
       <Banner></Banner>
+      <OurServices></OurServices>
+      <ExplorePrograms></ExplorePrograms>
     </div>
   );
 }

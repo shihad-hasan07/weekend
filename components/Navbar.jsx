@@ -23,9 +23,9 @@ const Navbar = () => {
 
                 <div className="font-semibold text-lg flex gap-4 ">
                     <Link href='/'>Home</Link>
-                    <Link href='/about'>About us</Link>
+                    <Link href='/about-us'>About us</Link>
                     <Link href='/courses'>Courses</Link>
-                    <Link href='/contact'>Contact us</Link>
+                    <Link href='/contact-us'>Contact us</Link>
                     <Link href='/faq'>FAQ's</Link>
                 </div>
             </div>
