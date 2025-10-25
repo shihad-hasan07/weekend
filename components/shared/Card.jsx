@@ -45,7 +45,10 @@ const Card = ({ res }) => {
             <div className='flex gap-2 items-center'>
 
                 <span className='text-gray-500 font-semibold'>{rating}</span>
+
+
                 <div className='mt-1'><ReactRating rating={rating} /></div>
+                
                 <span className='text-gray-500'>({reviews})</span>
             </div>
 

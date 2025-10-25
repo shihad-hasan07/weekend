@@ -1,20 +1,43 @@
-'use client'
+// 'use client'
+// import { MdOutlineStarOutline, MdOutlineStarPurple500 } from "react-icons/md";
+
+
+
+
+// const ReactRating = ({ rating }) => {
+   
+
+//     return (
+//         <>
+           
+//         </>
+//     )
+// };
+
+// export default ReactRating;
+
+
+
+
+'use client';
+import React from 'react';
+import ReactStars from 'react-rating-stars-component';
 import { MdOutlineStarOutline, MdOutlineStarPurple500 } from "react-icons/md";
-import Rating from "react-rating";
 
 const ReactRating = ({ rating }) => {
-    return (
-        <>
-            <Rating
-                initialRating={rating}
-                fullSymbol={<MdOutlineStarPurple500 size={21} color="ff9b26" />}
-                emptySymbol={<MdOutlineStarOutline size={21} color="ff9b26" />}
-                fractions={10}
-                readonly
-            />
-
-        </>
-    );
+  return (
+    <ReactStars
+      count={5}                 
+      value={5}         
+      edit={false}               
+      isHalf={true}              
+      size={21}                  
+      activeColor="#ff9b26"    
+      color="#e0e0e0"         
+      emptyIcon={<MdOutlineStarOutline />}
+      filledIcon={<MdOutlineStarPurple500 />}
+    />
+  );
 };
 
 export default ReactRating;
