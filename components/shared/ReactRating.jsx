@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ReactRating = ({rating}) => {
+const ReactRating = ({ rating }) => {
     return (
         <div>
-sfsf  {rating}
+            sfsf  {rating}
         </div>
     );
 };
