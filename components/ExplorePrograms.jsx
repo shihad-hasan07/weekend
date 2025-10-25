@@ -13,9 +13,9 @@ const ExplorePrograms = async () => {
             <p className='text-[#667085] text-[20px]'>Let's join our famous class, the knowledge provided will definitely be useful for you.</p>
 
             {/* courses */}
-            <div>
+            <div className='grid grid-cols-3 gap-10 px-20 mt-10'>
                 {
-                    courses.map((res, idx) => <Card res={res} key={idx}></Card>)
+                    courses.slice(0,6).map((res, idx) => <Card res={res} key={idx}></Card>)
                 }
             </div>
         </div>

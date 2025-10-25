@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading_SubHeading from './shared/Heading_SubHeading';
-import CardCarousel from './Swipper';
+import CardCarousel from './Swipper_services';
 
 const OurServices = () => {
     return (
