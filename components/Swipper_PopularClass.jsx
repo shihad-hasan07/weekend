@@ -1,9 +1,7 @@
-import React from 'react';
-import Heading_SubHeading from './shared/Heading_SubHeading';
-import fetch_courses from './shared/fetch_courses';
+'use client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 import Card from './shared/Card';
-import Swipper_PopularClass from './Swipper_PopularClass';
-
 
 const courses = [
     {
@@ -148,27 +146,26 @@ const courses = [
     }
 ]
 
-const ExplorePrograms = async () => {
-    // const courses = await fetch_courses()
-
-
+const Swipper_PopularClass = () => {
     return (
-        <div className='container  mx-auto mt-10'>
-            <Heading_SubHeading position={'left'} title={'Explore Programs'} details={'Our Most Popular Class'}></Heading_SubHeading>
-            <p className='text-[#667085] text-[20px]'>Let's join our famous class, the knowledge provided will definitely be useful for you.</p>
-
-            {/* courses */}
-            {/* <div className='grid grid-cols-3 gap-10 px-20 mt-10'>
-                {
-                    courses.slice(0, 6).map((res, idx) => <Card res={res} key={idx}></Card>)
-                }
-            </div> */}
-
-            <div>
-                <Swipper_PopularClass></Swipper_PopularClass>
-            </div>
+        <div className="container mx-auto py-12">
+            <Swiper
+                modules={[Pagination]}
+                pagination={{ clickable: true }}
+                spaceBetween={30}
+                breakpoints={{
+                    0: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                }} className="pb-10">
+                {courses.sort((a,b)=>b.rating-a.rating).slice(0,6).map((course, idx) => (
+                    <SwiperSlide key={idx}>
+                        <Card res={course}></Card>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </div>
     );
 };
 
-export default ExplorePrograms;
+export default Swipper_PopularClass;

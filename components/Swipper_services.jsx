@@ -44,12 +44,12 @@ const courses = [
         color: "bg-white text-black",
         icon: <FiMonitor size={26} className="text-green-500" />,
     },
-    {
-        title: "Responsive Design",
-        desc: "Make designs work perfectly on all devices smoothly today.",
-        color: "bg-white text-black",
-        icon: <AiOutlineLineChart size={26} className="text-cyan-500" />,
-    }
+    // {
+    //     title: "Responsive Design",
+    //     desc: "Make designs work perfectly on all devices smoothly today.",
+    //     color: "bg-white text-black",
+    //     icon: <AiOutlineLineChart size={26} className="text-cyan-500" />,
+    // }
 ];
 
 

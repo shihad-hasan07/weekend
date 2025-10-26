@@ -26,9 +26,4 @@ const fetch_courses = async () => {
 export default fetch_courses;
 
 
-
-
-
-
-
 // https://weekend-iota.vercel.app/
