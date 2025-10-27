@@ -9,7 +9,7 @@ const Card = ({ res }) => {
         instructor, instructorImage, enrolled, price, image } = res
 
     return (
-        <div className='p-6 rounded-lg drop-shadow-sm backdrop-blur-3xl bg-white'>
+        <div className='p-6 border rounded-lg drop-shadow-sm backdrop-blur-3xl bg-white'>
             <div className='relative min-h-[250]'>
                 <Image
                     src={`${image}`} alt={title}

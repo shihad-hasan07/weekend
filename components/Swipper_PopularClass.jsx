@@ -148,17 +148,18 @@ const courses = [
 
 const Swipper_PopularClass = () => {
     return (
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto">
             <Swiper
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
                 spaceBetween={30}
+                loop={true}
                 breakpoints={{
                     0: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },
                     1024: { slidesPerView: 3 },
                 }} className="pb-10">
-                {courses.sort((a,b)=>b.rating-a.rating).slice(0,6).map((course, idx) => (
+                {courses.sort((a, b) => b.rating - a.rating).slice(0, 6).map((course, idx) => (
                     <SwiperSlide key={idx}>
                         <Card res={course}></Card>
                     </SwiperSlide>
