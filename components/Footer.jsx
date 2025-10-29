@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaTwitter, FaLinkedin, FaGithub, FaFacebookF, FaDribbble } from 'react-icons/fa';
 
 export default function Footer() {
@@ -6,17 +7,19 @@ export default function Footer() {
     <footer className="bg-[#1c2536] text-white py-12 px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 mb-12">
-          
+
           {/* Logo and Description */}
           <div className="col-span-2 sm:col-span-3 md:col-span-1 text-center md:text-left">
             <div className="mb-4 flex flex-col items-center md:items-start">
-              <Image 
-                src="/logo.png" 
-                alt="Weekend Logo" 
-                width={120} 
-                height={40} 
-                className="mb-2"
-              />
+              <Link href='/'>
+                <Image
+                  src="/logo.png"
+                  alt="Weekend Logo"
+                  width={120}
+                  height={40}
+                  className="mb-2"
+                />
+              </Link>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Top learning experiences that create more talent in the world.
@@ -43,7 +46,7 @@ export default function Footer() {
               <li><a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Careers</a></li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors inline-flex items-center gap-2">
-                  Press 
+                  Press
                   <span className="bg-white text-[#1c2536] text-xs px-2 py-0.5 rounded-full font-medium">New</span>
                 </a>
               </li>
@@ -80,7 +83,7 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">
             © 2025 weekend. All rights reserved.
           </p>
-          
+
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a href="#" className="text-gray-400 hover:text-white transition-colors">

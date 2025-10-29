@@ -21,17 +21,16 @@ const Navbar = () => {
   return (
     <>
       {menuOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-40 lg:hidden"
           onClick={() => setMenuOpen(false)}
         />
       )}
-      
-      <nav className={`w-full bg-white z-50 transition-all duration-500 ease-in-out ${
-        isScrolled 
-          ? 'fixed top-0 left-0 right-0 shadow-md animate-slideDown' 
-          : 'relative'
-      }`}>
+
+      <nav className={`w-full bg-white z-50 transition-all duration-500 ease-in-out ${isScrolled
+        ? 'fixed top-0 left-0 right-0 shadow-md animate-slideDown'
+        : 'relative'
+        }`}>
         <style jsx>{`
           @keyframes slideDown {
             from {
@@ -49,7 +48,9 @@ const Navbar = () => {
         `}</style>
         <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-20 flex justify-between items-center py-3 sm:py-4">
           <div className="flex items-center gap-2 sm:gap-3">
-            <img src="/logo.png" alt="Logo" className="h-8 sm:h-10 lg:h-12" />
+            <Link href='/'>
+              <img src="/logo.png" alt="Logo" className="h-8 sm:h-10 lg:h-12" />
+            </Link>
           </div>
 
           <div className="flex-1 flex justify-center px-2 sm:px-4">
@@ -88,10 +89,9 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div 
-          className={`lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 overflow-hidden transition-all duration-300 ease-in-out z-50 ${
-            menuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-          }`}
+        <div
+          className={`lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200 overflow-hidden transition-all duration-300 ease-in-out z-50 ${menuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+            }`}
         >
           <div className="flex flex-col items-center gap-3 sm:gap-4 py-4 sm:py-6 font-semibold text-sm sm:text-base">
             <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-[#20B486] transition">
