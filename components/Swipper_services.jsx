@@ -56,34 +56,37 @@ const courses = [
 
 export default function CardCarousel() {
     return (
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto py-8 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8">
             <Swiper
                 modules={[Pagination]}
-                pagination={{ clickable: true }}
+                pagination={{ 
+                    clickable: true,
+                    el: '.custom-pagination',
+                }}
                 spaceBetween={30}
                 breakpoints={{
                     0: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },
                     1024: { slidesPerView: 3 },
                 }}
-                className="pb-10"
             >
                 {courses.map((course, idx) => (
                     <SwiperSlide key={idx}>
-                        <div className='min-h-[210px]  p-6 rounded-2xl border flex flex-col justify-between'>
-                            <div className='flex items-center gap-4'>
-                                <div className='border rounded-lg p-2 bg-[#fce7f6]'>{course.icon}</div>
-                                <div className='text-2xl font-bold'>{course.title}</div>
+                        <div className='min-h-[180px] sm:min-h-[200px] lg:min-h-[210px] p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border flex flex-col justify-between'>
+                            <div className='flex items-center gap-3 sm:gap-4'>
+                                <div className='border rounded-lg p-1.5 sm:p-2 bg-[#fce7f6]'>{course.icon}</div>
+                                <div className='text-lg sm:text-xl lg:text-2xl font-bold'>{course.title}</div>
                             </div>
-                            <p className='text-gray-500 my-5'>{course.desc}</p>
-                            <div className='text-[#4AC8AE] text-[18px] gap-2 flex items-center'>
+                            <p className='text-gray-500 my-3 sm:my-4 lg:my-5 text-sm sm:text-base'>{course.desc}</p>
+                            <div className='text-[#4AC8AE] text-base sm:text-[17px] lg:text-[18px] gap-1 sm:gap-2 flex items-center'>
                                 <button>Learn More</button>
-                                <MdKeyboardArrowRight  size={24} className='pt-1'/>
+                                <MdKeyboardArrowRight size={20} className='sm:w-6 sm:h-6 pt-1'/>
                             </div>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <div className="custom-pagination flex justify-center mt-6"></div>
         </div>
     );
 }

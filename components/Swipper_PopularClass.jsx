@@ -152,13 +152,15 @@ const Swipper_PopularClass = () => {
             <Swiper
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
-                spaceBetween={30}
+                spaceBetween={20}
                 loop={true}
                 breakpoints={{
-                    0: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
-                }} className="pb-10">
+                    0: { slidesPerView: 1, spaceBetween: 15 },
+                    640: { slidesPerView: 1, spaceBetween: 20 },
+                    768: { slidesPerView: 2, spaceBetween: 20 },
+                    1024: { slidesPerView: 3, spaceBetween: 30 },
+                }} 
+                className="pb-8 sm:pb-10">
                 {courses.sort((a, b) => b.rating - a.rating).slice(0, 6).map((course, idx) => (
                     <SwiperSlide key={idx}>
                         <Card res={course}></Card>

@@ -153,16 +153,16 @@ const ExplorePrograms = async () => {
 
 
     return (
-        <div className='container mx-auto my-10'>
+        <div className='container mx-auto my-6 sm:my-8 lg:my-10 px-4 sm:px-6 lg:px-8'>
             <Heading_SubHeading position={'left'} title={'Explore Programs'} details={'Our Most Popular Class'}></Heading_SubHeading>
-            <p className='text-[#667085] text-[20px]'>Let's join our famous class, the knowledge provided will definitely be useful for you.</p>
+            <p className='text-[#667085] text-base sm:text-lg lg:text-[20px] mt-2 sm:mt-3'>Let's join our famous class, the knowledge provided will definitely be useful for you.</p>
 
-            <div className='px-4 my-7'>
+            <div className='px-0 sm:px-2 lg:px-4 my-5 sm:my-6 lg:my-7'>
                 <Swipper_PopularClass></Swipper_PopularClass>
             </div>
             <div className='flex justify-center items-center'>
                 <Link href='/courses'>
-                    <button  className='cursor-pointer bg-[#f9fafb] mt-2 px-4 py-1 font-semibold text-sm text-center border rounded-sm'>Explore All Programs</button>
+                    <button className='cursor-pointer bg-[#f9fafb] mt-2 px-3 sm:px-4 py-1 sm:py-1.5 font-semibold text-xs sm:text-sm text-center border rounded-sm'>Explore All Programs</button>
                 </Link>
             </div>
         </div>
