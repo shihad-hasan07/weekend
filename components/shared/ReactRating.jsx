@@ -1,11 +1,18 @@
-import React from 'react';
+'use client'
+import dynamic from 'next/dynamic'
 
-const ReactRating = ({ rating }) => {
+const ReactStars = dynamic(() => import('react-stars'), { ssr: false })
+
+export default function ReactRating({ rating }) {
     return (
-        <div>
-            sfsf  {rating}
-        </div>
-    );
-};
-
-export default ReactRating;
+        <>
+            <ReactStars
+                count={5}
+                size={22}
+                value={rating}
+                edit={false}
+                color2="#ffd700"
+            />
+        </>
+    )
+}

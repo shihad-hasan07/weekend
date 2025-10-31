@@ -41,14 +41,10 @@ const Card = ({ res }) => {
 
             <p className='text-[#667085] my-3 sm:my-4 text-sm sm:text-base'>{description}</p>
 
-            <div className='flex gap-1.5 sm:gap-2 items-center text-sm sm:text-base'>
-
-                <span className='text-gray-500 font-semibold'>{rating}</span>
-
-
-                <div className='mt-0.5 sm:mt-1'><ReactRating rating={rating} /></div>
-                
-                <span className='text-gray-500'>({reviews})</span>
+            <div className='flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base'>
+                <p className='text-gray-500 font-semibold'>{rating}</p>
+                <div className='pb-[2]'><ReactRating rating={rating} /></div>
+                <p className='text-gray-500'>({reviews})</p>
             </div>
 
             <div className='flex justify-between items-end mt-6 sm:mt-7 lg:mt-8'>
