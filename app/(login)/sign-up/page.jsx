@@ -49,7 +49,7 @@ const SignUpPage = () => {
         console.log('google log in user', res);
       })
       .catch(error => {
-        console.log('error happend');
+        console.log('error happend',error);
       })
   }
 
@@ -59,7 +59,7 @@ const SignUpPage = () => {
         console.log('google log in user', res);
       })
       .catch(error => {
-        console.log('error happend');
+        console.log('error happend',error);
       })
 
   }
