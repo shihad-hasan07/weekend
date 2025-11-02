@@ -21,7 +21,6 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  console.log('user from navbar', user);
   return (
     <>
       {menuOpen && (

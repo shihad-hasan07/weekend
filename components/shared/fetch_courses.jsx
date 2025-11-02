@@ -16,10 +16,6 @@ const fetch_courses = async () => {
 
     const res = await fetch('http://localhost:3000/api/courses')
     const ress = await res.json()
-
-
-
-    console.log('dataaa is', ress)
     return ress;
 };
 
