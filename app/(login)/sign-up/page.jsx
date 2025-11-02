@@ -40,7 +40,7 @@ const SignUpPage = () => {
         setLoading(false)
         console.log('user login', res);
       })
-      .catch(err => toast.error('Registration Failed'))
+      .catch()
   }
 
   const handleGoogleLogin = () => {
