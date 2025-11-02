@@ -80,7 +80,7 @@ const Navbar = () => {
               user
                 ? <div className="relative">
                   {/* Profile Button */}
-                  <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-1 px-2 py-1 bg-[#e7f8f3] hover:bg-[#98cfbd] rounded-full transition-colors duration-200 border border-gray-200">
+                  <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer flex items-center gap-1 px-2 py-1 bg-[#e7f8f3] hover:bg-[#98cfbd] rounded-full transition-colors duration-200 border border-gray-200">
                     <img className="w-12 h-12 rounded-full border-4 border-white object-cover" src={user?.photoURL} alt={user?.displayName} />
                     <ChevronDown className={`w-5 h-5 text-gray-600 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                   </button>
