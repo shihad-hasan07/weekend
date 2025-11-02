@@ -64,19 +64,23 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8 font-semibold text-sm lg:text-base">
+          <div className="hidden lg:flex items-center mr-7 gap-6 xl:gap-8 font-semibold text-sm lg:text-base">
             <Link href="/">Home</Link>
-            <Link href="/about-us">About us</Link>
             <Link href="/courses">Courses</Link>
+            <Link href="/about-us">About us</Link>
             <Link href="/contact-us">Contact us</Link>
             <Link href="/faq">FAQ's</Link>
           </div>
 
           <div className="hidden lg:flex items-center gap-3 xl:gap-4">
-            <button className="font-semibold text-sm lg:text-base">Sign in</button>
-            <button className="bg-[#20B486] px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg font-semibold text-white text-sm lg:text-base hover:bg-[#169b6b] transition">
-              Create free account
-            </button>
+            <Link href='/sign-in'>
+              <button className="cursor-pointer font-semibold text-sm lg:text-base">Sign in</button>
+            </Link>
+
+            <Link href='/sign-up'>
+              <button className="cursor-pointer bg-[#20B486] px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg font-semibold text-white text-sm lg:text-base hover:bg-[#169b6b] transition">
+                Create free account</button>
+            </Link>
           </div>
 
           <div className="lg:hidden">
@@ -97,11 +101,11 @@ const Navbar = () => {
             <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-[#20B486] transition">
               Home
             </Link>
-            <Link href="/about-us" onClick={() => setMenuOpen(false)} className="hover:text-[#20B486] transition">
-              About us
-            </Link>
             <Link href="/courses" onClick={() => setMenuOpen(false)} className="hover:text-[#20B486] transition">
               Courses
+            </Link>
+            <Link href="/about-us" onClick={() => setMenuOpen(false)} className="hover:text-[#20B486] transition">
+              About us
             </Link>
             <Link href="/contact-us" onClick={() => setMenuOpen(false)} className="hover:text-[#20B486] transition">
               Contact us
